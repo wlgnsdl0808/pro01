@@ -1,0 +1,50 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<div class="hd_wrap">
+           <a href="index.html" class="logo"><img src="img/logo.png" alt="로고"></a>
+           <nav class="tnb">
+               <a href="login.html">로그인</a>
+               <a href="join.html">회원가입</a>
+           </nav>
+           <nav class="gnb">
+               <ul>
+                   <li class="item1">
+                       <a href="company.html#page1" class="main">브랜드스토리</a>
+                       <ul class="sub">
+                           <li><a href="company.html#page1">브랜드 소개</a></li>
+                           <li><a href="company.html#page2">공지사항</a></li>
+                           <li><a href="company.html#page3">광고 영상</a></li>
+                       </ul>
+                   </li>
+                   <li class="item2">
+                       <a href="menu.html#page1" class="main">메뉴</a>
+                       <ul class="sub">
+                           <li><a href="menu.html#page1">전체</a></li>
+                           <li><a href="menu.html#page2">버거</a></li>
+                           <li><a href="menu.html#page3">세트메뉴</a></li>
+                       </ul>
+                   </li>
+                   <li class="item3">
+                       <a href="service.html#page1" class="main">프로모션</a>
+                       <ul class="sub">
+                           <li><a href="service.html#page1">전체</a></li>
+                           <li><a href="service.html#page2">진행중</a></li>
+                           <li><a href="service.html#page3">종료</a></li>
+                       </ul>
+                   </li>
+                   <li class="item4">
+                       <a href="custom.html#page1" class="main">고객문의</a>
+                       <ul class="sub">
+                           <li><a href="custom.html#page1">자주하는 질문</a></li>
+                           <li><a href="custom.html#page2">Q/A</a></li>
+                           <li><a href="custom.html#page3">게시판</a></li>
+                       </ul>
+                   </li>
+                   <li class="item5">
+                       <a href="map.html" class="main">매장찾기</a>
+                       <ul class="sub">
+                       </ul>
+                   </li>
+               </ul>
+           </nav>
+       </div>
