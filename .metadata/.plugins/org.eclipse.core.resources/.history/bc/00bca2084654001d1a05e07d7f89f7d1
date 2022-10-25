@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>맘스터치</title>
+<!-- 메타포 -->
+<!-- 오픈그래프 -->
+<!-- 파비콘 -->
+<link rel="shortcut icon" type="image/x-icon" href="wiz_logo/apple-icon-60x60.png">
+<!-- 각 종 플러그인과 설정 파일 -->
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+<!-- 구형 브라우저 html5태그 인식 -->
+<script src="js/html5shiv.js"></script>
+<!-- 구형 브라우저에서 css animation 인식 -->
+<script src="js/prefixfree.min.js"></script>
+<!-- 구형 브라우저에서 미디어쿼리 인식 -->
+<script src="js/respond.min.js"></script>
+<!-- jquery 플러그인 연결 -->
+<script src="js/jquery-1.11.1.js"></script>
+<link rel="stylesheet" href="css/reset2.css">
+<link rel="stylesheet" href="css/header.css">
+<style>
+/* header.css */
+.hd { position: fixed;}
+    /* content */
+    .vs { clear:both; width: 100%; height:300px; overflow: hidden; }
+    .vs img { display:block; width: 100%; height:auto; }
+    .bread { clear:both; width: 100%; line-height: 60px; border-bottom:3px solid #eee; }
+    .bread_fr { width: 1200px; margin: 0 auto; }
+    .page { clear:both; width: 100%; min-height:100vh;}
+    .page:after { content:""; display:block; clear:both; }
+    .page_wrap { width: 1200px; margin: 0 auto; }
+
+    .page_title { padding-top: 1em; text-align: center; }
+    .home { color:#333; }
+
+    .frm { border:2px solid #333; padding: 24px; width: 1150px; margin:50px auto; }
+    .frm_tb { display:table; margin:40px auto;  }
+    .frm_tb tr { display:table-row; }
+    .frm_tb td, .frm_tb th { display:table-cell; }
+    .frm_tb th { width:200px; height: 48px;  }
+    .frm_tb td { width:300px; height: 48px; }
+    .frm_tb label:before { content:"*"; }
+
+    .in_dt { background-color:#fff; height:32px; line-height: 32px; width: 280px; 
+    color:#333; font-size:16px; text-indent:0.5em; }
+    .in_btn { display:block; background-color:#333; min-width:120px; height: 32px; 
+    line-height: 32px; border-radius:20px; float:left; margin-left:80px; margin-right:20px; cursor:pointer; }
+    .in_btn:hover { background-color: deepskyblue; }
+
+    /* ul > li 를 테이블 처럼 출력 */
+    .frm_tb { display:table; }
+    .frm_tb li { display:table-row; }
+    .frm_tb .td, .frm_tb .th, .frm_tb .td2 { display:table-cell; }
+    .frm_tb .th { width:200px; }
+    .frm_tb .td { width:200px; }
+    .frm_tb .td2 { width:400px; }
+
+    #map_canvas { margin-bottom:40px; }
+    #contact p { text-align:left;	padding-left:30px; line-height:30px; 
+		margin-top:25px;	padding-right:25px; }
+	.map_tab a { display:inline-block; margin:18px; width:150px;
+	text-align: center; line-height: 36px; background-color: #34283c; color:#fff; 
+	border-radius:8px; }
+    </style>
+    <link rel="stylesheet" href="css/footer.css">
+    <script>
+    $(document).ready(function(){
+        $(".to_top").attr("href", location.href);
+        $(window).scroll(function(){
+            var ht = $(window).height();
+            var tp = $(this).scrollTop();
+            if(tp>=300){
+                $(".to_top").addClass("on");
+                $(".to_top").attr("href", location.href);
+            } else {
+                $(".to_top").removeClass("on");
+                $(".to_top").attr("href", location.href);
+            }
+        });
+    });    
+    </script>
+    <!--여기부터 -->
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script> 
+<script> 
+//좌표 값을 바꿔서 입력 위도:37.658827995980204, 경도:126.77512489202539 
+function initialize() {
+  var myLatlng = new google.maps.LatLng(37.658827995980204,126.77512489202539);
+  var mapOptions = {
+    zoom: 17,
+    center: myLatlng
+  }
+  var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+  var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      title: '일산동구청'	  //레이블을 바꿔서 입력
+  });
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+ </script>
+<!-- 여기까지를 head태그 닫기 전에 복사해서 붙여넣기 -->
+</head>
+<body>
+<div class="wrap">
+<header class="hd">
+    <div class="hd_wrap">
+        <a href="index1.html" class="logo"><img src="img/logo.png" alt="로고"></a>
+        <nav class="tnb">
+            <a href="login.html">로그인</a>
+            <a href="join.html">회원가입</a>
+        </nav>
+        <nav class="gnb">
+            <ul>
+                <li class="item1">
+                    <a href="company.html#page1" class="main">브랜드스토리</a>
+                    <ul class="sub">
+                        <li><a href="company.html#page1">브랜드 소개</a></li>
+                        <li><a href="company.html#page2">공지사항</a></li>
+                        <li><a href="company.html#page3">광고 영상</a></li>
+                    </ul>
+                </li>
+                <li class="item2">
+                    <a href="menu.html#page1" class="main">메뉴</a>
+                    <ul class="sub">
+                        <li><a href="menu.html#page1">전체</a></li>
+                        <li><a href="menu.html#page2">버거</a></li>
+                        <li><a href="menu.html#page3">세트메뉴</a></li>
+                    </ul>
+                </li>
+                <li class="item3">
+                    <a href="service.html#page1" class="main">프로모션</a>
+                    <ul class="sub">
+                        <li><a href="service.html#page1">전체</a></li>
+                        <li><a href="service.html#page2">진행중</a></li>
+                        <li><a href="service.html#page3">종료</a></li>
+                    </ul>
+                </li>
+                <li class="item4">
+                    <a href="custom.html#page1" class="main">고객문의</a>
+                    <ul class="sub">
+                        <li><a href="custom.html#page1">자주하는 질문</a></li>
+                        <li><a href="custom.html#page2">Q/A</a></li>
+                        <li><a href="custom.html#page3">게시판</a></li>
+                    </ul>
+                </li>
+                <li class="item5">
+                    <a href="map.html" class="main">매장찾기</a>
+                    <ul class="sub">
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="content">
+    <figure class="vs">
+        <img src="img/p_brand_1.jpg" alt="비주얼">
+    </figure>
+    <div class="bread">
+        <div class="bread_fr">
+            <a href="index1.html" class="home">HOME</a> &gt;
+            <span class="sel">매장찾기</span>
+        </div>
+    </div>
+    <section class="page">
+        <div class="page_wrap">
+            <h2 class="page_title">매장찾기</h2>
+            <div class="form_fr">
+                <form name="frm1" action="" method="post" id="loginForm" class="frm">
+                    <div id="naver_map">
+                        <a href="https://naver.me/5D3O2psn">네이버 지도</a><br><br>
+                        <a href="https://goo.gl/maps/tB2Ak61rwpiAFqY5A">구글 지도</a><br><br>
+                        <div class="map_tab">
+                            <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5962.6399372702!2d126.77119283301745!3d37.65864687370668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c8551df24f16b%3A0xdcfb88d27e947ebf!2z7J287IKw64-Z6rWs7LKt!5e0!3m2!1sko!2skr!4v1666084195271!5m2!1sko!2skr" target="g_map">일산 캠퍼스</a> &nbsp; 
+                            <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.5692519724917!2d127.02787731558699!3d37.494490036007996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca158ea750d33%3A0xf29e40ea72daaa48!2z642U7KGw7J2A7Lu07ZOo7YSw7JWE7Lm0642w66-47ZWZ7JuQIOqwleuCqOygkA!5e0!3m2!1sko!2skr!4v1666157571832!5m2!1sko!2skr" target="g_map">강남 캠퍼스</a> &nbsp; 
+                            <a href="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3162.3922389631284!2d126.98227256558856!3d37.569380431722536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z642U7KGw7J2AIOyiheuhnOy6oO2NvOyKpA!5e0!3m2!1sko!2skr!4v1666157757984!5m2!1sko!2skr" target="g_map">종로 캠퍼스</a>
+                        </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5962.6399372702!2d126.77119283301745!3d37.65864687370668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c8551df24f16b%3A0xdcfb88d27e947ebf!2z7J287IKw64-Z6rWs7LKt!5e0!3m2!1sko!2skr!4v1666084195271!5m2!1sko!2skr" width="1150" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" name="g_map" id="g_map"></iframe>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+<footer class="ft">
+    <div class="ft_wrap">
+        <div class="ft_logo"><img src="img/logo.png" alt="하단로고"></div>
+        <div class="mid_box">
+            <nav class="fnb">
+                <a href="member01.html">개인정보 처리 방침</a>
+                <a href="member02.html">이용약관</a>
+                <a href="member03.html">이메일무단수집거부</a>
+            </nav>
+            <p class="addr">
+                ㈜맘스터치앤컴퍼니 | 대표이사 | 김동전 사업자등록번호 676-86-00102<br>
+                서울시 강동구 천호대로 1077 이스트센트럴타워 24,25층<br>
+                통신판매업 신고번호 : 제2015-서울강동-0155호<br>
+                대표전화 1661-4205 | 팩스 02-418-0279, 070-4676-0635  
+            </p>
+        </div>
+        <script>
+        function sel_link(sel){
+            location.href = sel.value;
+        }
+        </script>
+    </div>
+</footer>
+</div>
+<a href="#" class="to_top">↑</a>
+</body>
+</html>

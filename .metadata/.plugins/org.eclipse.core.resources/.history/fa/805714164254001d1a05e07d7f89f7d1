@@ -96,7 +96,7 @@
 <body>
 <div class="wrap">
 <header class="hd">
-    <%@ include file = "nav.jsp" %>
+    <%@ include file="nav.jsp" %>
 </header>
 <div class="content">
     <figure class="vs">

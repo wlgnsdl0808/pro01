@@ -1,0 +1,132 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%@ include file = "head.jsp" %>
+<link rel="stylesheet" href="css/reset2.css">
+<link rel="stylesheet" href="css/header.css">
+<style>
+/* header.css */
+.hd { position: fixed;}
+    /* content */
+    .vs { clear:both; width: 100%; height:300px; overflow: hidden; }
+    .vs img { display:block; width: 100%; height:auto; }
+    .bread { clear:both; width: 100%; line-height: 60px; border-bottom:3px solid #eee; }
+    .bread_fr { width: 1200px; margin: 0 auto; }
+    .page { clear:both; width: 100%; min-height:100vh;}
+    .page:after { content:""; display:block; clear:both; }
+    .page_wrap { width: 1200px; margin: 0 auto; }
+
+    .page_title { padding-top: 1em; text-align: center; }
+    .home { color:#333; }
+
+    .frm { border:2px solid #333; padding: 24px; width: 1150px; margin:50px auto; }
+    .frm_tb { display:table; margin:40px auto;  }
+    .frm_tb tr { display:table-row; }
+    .frm_tb td, .frm_tb th { display:table-cell; }
+    .frm_tb th { width:200px; height: 48px;  }
+    .frm_tb td { width:300px; height: 48px; }
+    .frm_tb label:before { content:"*"; }
+
+    .in_dt { background-color:#fff; height:32px; line-height: 32px; width: 280px; 
+    color:#333; font-size:16px; text-indent:0.5em; }
+    .in_btn { display:block; background-color:#333; min-width:120px; height: 32px; 
+    line-height: 32px; border-radius:20px; float:left; margin-left:80px; margin-right:20px; cursor:pointer; }
+    .in_btn:hover { background-color: deepskyblue; }
+
+    /* ul > li 를 테이블 처럼 출력 */
+    .frm_tb { display:table; }
+    .frm_tb li { display:table-row; }
+    .frm_tb .td, .frm_tb .th, .frm_tb .td2 { display:table-cell; }
+    .frm_tb .th { width:200px; }
+    .frm_tb .td { width:200px; }
+    .frm_tb .td2 { width:400px; }
+
+    #map_canvas { margin-bottom:40px; }
+    #contact p { text-align:left;	padding-left:30px; line-height:30px; 
+		margin-top:25px;	padding-right:25px; }
+	.map_tab a { display:inline-block; margin:18px; width:150px;
+	text-align: center; line-height: 36px; background-color: #34283c; color:#fff; 
+	border-radius:8px; }
+    </style>
+    <link rel="stylesheet" href="css/footer.css">
+    <script>
+    $(document).ready(function(){
+        $(".to_top").attr("href", location.href);
+        $(window).scroll(function(){
+            var ht = $(window).height();
+            var tp = $(this).scrollTop();
+            if(tp>=300){
+                $(".to_top").addClass("on");
+                $(".to_top").attr("href", location.href);
+            } else {
+                $(".to_top").removeClass("on");
+                $(".to_top").attr("href", location.href);
+            }
+        });
+    });    
+    </script>
+    <!--여기부터 -->
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script> 
+<script> 
+//좌표 값을 바꿔서 입력 위도:37.658827995980204, 경도:126.77512489202539 
+function initialize() {
+  var myLatlng = new google.maps.LatLng(37.658827995980204,126.77512489202539);
+  var mapOptions = {
+    zoom: 17,
+    center: myLatlng
+  }
+  var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+  var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      title: '일산동구청'	  //레이블을 바꿔서 입력
+  });
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+ </script>
+<!-- 여기까지를 head태그 닫기 전에 복사해서 붙여넣기 -->
+</head>
+<body>
+<div class="wrap">
+<header class="hd">
+    <%@ include file = "nav.jsp" %>
+</header>
+<div class="content">
+    <figure class="vs">
+        <img src="img/p_brand_1.jpg" alt="비주얼">
+    </figure>
+    <div class="bread">
+        <div class="bread_fr">
+            <a href="index1.html" class="home">HOME</a> &gt;
+            <span class="sel">매장찾기</span>
+        </div>
+    </div>
+    <section class="page">
+        <div class="page_wrap">
+            <h2 class="page_title">매장찾기</h2>
+            <div class="form_fr">
+                <form name="frm1" action="" method="post" id="loginForm" class="frm">
+                    <div id="naver_map">
+                        <a href="https://naver.me/5D3O2psn">네이버 지도</a><br><br>
+                        <a href="https://goo.gl/maps/tB2Ak61rwpiAFqY5A">구글 지도</a><br><br>
+                        <div class="map_tab">
+                            <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5962.6399372702!2d126.77119283301745!3d37.65864687370668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c8551df24f16b%3A0xdcfb88d27e947ebf!2z7J287IKw64-Z6rWs7LKt!5e0!3m2!1sko!2skr!4v1666084195271!5m2!1sko!2skr" target="g_map">일산 캠퍼스</a> &nbsp; 
+                            <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.5692519724917!2d127.02787731558699!3d37.494490036007996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca158ea750d33%3A0xf29e40ea72daaa48!2z642U7KGw7J2A7Lu07ZOo7YSw7JWE7Lm0642w66-47ZWZ7JuQIOqwleuCqOygkA!5e0!3m2!1sko!2skr!4v1666157571832!5m2!1sko!2skr" target="g_map">강남 캠퍼스</a> &nbsp; 
+                            <a href="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3162.3922389631284!2d126.98227256558856!3d37.569380431722536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z642U7KGw7J2AIOyiheuhnOy6oO2NvOyKpA!5e0!3m2!1sko!2skr!4v1666157757984!5m2!1sko!2skr" target="g_map">종로 캠퍼스</a>
+                        </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5962.6399372702!2d126.77119283301745!3d37.65864687370668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c8551df24f16b%3A0xdcfb88d27e947ebf!2z7J287IKw64-Z6rWs7LKt!5e0!3m2!1sko!2skr!4v1666084195271!5m2!1sko!2skr" width="1150" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" name="g_map" id="g_map"></iframe>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+<footer class="ft">
+    <%@ include file = "footer" %>
+</footer>
+</div>
+<a href="#" class="to_top">↑</a>
+</body>
+</html>

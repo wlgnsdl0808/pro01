@@ -2,8 +2,11 @@
     pageEncoding="UTF-8"%>
 <%
 	String id = (String) session.getAttribute("id");
+	String email = (String) session.getAttribute("email");
 	String name = (String) session.getAttribute("name");
- %>
+	
+	String msg = (String) application.getAttribute("msg");
+%>
 <div class="hd_wrap">
            <a href="index.jsp" class="logo"><img src="img/logo.png" alt="로고"></a>
            <nav class="tnb">
@@ -11,7 +14,7 @@
            		if(id !=null && id.equals("admin")){
            %>
            		<div>
-           			<a href="memeList.jsp">회원관리</a>
+           			<a href="memList.jsp">회원관리</a>
            			<a href="boardList.jsp">게시판 관리</a>
                		<a href="logout.jsp">로그아웃</a>
            		</div>
