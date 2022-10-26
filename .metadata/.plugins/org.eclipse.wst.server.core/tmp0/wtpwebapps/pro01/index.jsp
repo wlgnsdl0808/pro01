@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/reset2.css">
 	<link rel="stylesheet" href="css/header.css">
 <style>
+
 /* header.css */
 
 /* content */

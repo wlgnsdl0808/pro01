@@ -1,0 +1,7 @@
+-- 글 목록
+select * from board;
+select count(*) as cnt from board;
+select * from board where rownum between 1 and 10 order by no desc;
+select no, title, content, author, resdate from
+(select rownum rn, no, title, content, author, resdate from
+board order by no desc) t1 where t1.rn between 0 and 9;

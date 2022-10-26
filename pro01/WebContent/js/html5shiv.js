@@ -4161,7 +4161,6 @@
   </details>
 
     </div>
-
     </div>
 
 
@@ -4176,7 +4175,6 @@
 </button>
 </form>    </details-dialog>
   </details>
-
     <div class="Popover anim-scale-in js-tagsearch-popover"
      hidden
      data-tagsearch-url="/aFarkas/html5shiv/find-definition"
@@ -4187,26 +4185,15 @@
     </div>
   </div>
 </div>
-
-
 </div>
-
   </div>
-
-
   </div>
-
   </turbo-frame>
-
-
     </main>
   </div>
-
   </div>
-
           <footer class="footer width-full container-xl p-responsive">
   <h2 class='sr-only'>Footer</h2>
-
   <div class="position-relative d-flex flex-items-center pb-2 f6 color-fg-muted border-top color-border-muted flex-column-reverse flex-lg-row flex-wrap flex-lg-nowrap mt-6 pt-6">
     <div class="list-style-none d-flex flex-wrap col-0 col-lg-2 flex-justify-start flex-lg-justify-between mb-2 mb-lg-0">
       <div class="mt-2 mt-lg-0 d-flex flex-items-center">
@@ -4219,7 +4206,6 @@
         </span>
       </div>
     </div>
-
     <nav aria-label='footer' class="col-12 col-lg-8">
       <h3 class='sr-only' id='sr-footer-heading'>Footer navigation</h3>
       <ul class="list-style-none d-flex flex-wrap col-12 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0" aria-labelledby='sr-footer-heading'>
@@ -4309,8 +4295,5 @@
         padding: 0 2px;
       }
     </style>
-
-
   </body>
 </html>
-

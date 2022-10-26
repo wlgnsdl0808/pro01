@@ -68,7 +68,7 @@
                        <ul class="sub">
                            <li><a href="custom.jsp#page1">자주하는 질문</a></li>
                            <li><a href="custom.jsp#page2">Q/A</a></li>
-                           <li><a href="custom.jsp#page3">게시판</a></li>
+                           <li><a href="boardList.jsp">게시판</a></li>
                        </ul>
                    </li>
                    <li class="item5">

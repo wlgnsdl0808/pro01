@@ -25,7 +25,7 @@
     .to_top { position:fixed; bottom:80px; right:80px; z-index:999; 
     background-color:rgba(11,11,11,0.75); color:#fff; display:block; width: 60px;
     height: 60px; line-height: 60px; text-align: center; font-size:20px; border-radius:32px; visibility:hidden; transition-duration:0.8s; }
-    .to_top:hover { background-color: deepskyblue; }
+    .to_top:hover { background-color: #ff9933; }
     .to_top.on { visibility: visible; }
 
     .noti_lst {  width: 1200px; float:left; }
