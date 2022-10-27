@@ -66,7 +66,7 @@
                    <li class="item4">
                        <a href="custom.jsp#page1" class="main">고객문의</a>
                        <ul class="sub">
-                           <li><a href="custom.jsp#page1">자주하는 질문</a></li>
+                           <li><a href="faq.jsp">자주하는 질문</a></li>
                            <li><a href="custom.jsp#page2">Q/A</a></li>
                            <li><a href="boardList.jsp">게시판</a></li>
                        </ul>

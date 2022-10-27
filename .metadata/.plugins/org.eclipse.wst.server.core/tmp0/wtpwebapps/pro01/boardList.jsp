@@ -5,7 +5,6 @@
 	request.setCharacterEncoding("UTF-8");
 	response.setCharacterEncoding("UTF-8");
 	response.setContentType("text/html; charset=UTF-8");
-	
 	String sid = (String) session.getAttribute("id");
 	
 	Connection con = null;
@@ -61,8 +60,8 @@
 	.tb tr th:nth-child(3) { width:160px; text-align:center; }
 	.tb tr th:last-child { text-align:center; }
 	#myTable_filter > label > input[type=search] { color: #333;}
-	#myTable_previous { border:2px solid #333; }
-	#myTable_previous:hover { background-color: #ff9933;}
+	#myTable > tbody > tr > td > a { color : #333;}
+	#myTable > tbody > tr > td > a:HOVER { color : red;}
 	
 	.btn_group { clear:both; width:580px; margin:20px auto; }
 	.btn_group .btn { display:block; float:left; margin:20px; min-width:100px; padding:8px; font-size:14px;
@@ -150,6 +149,8 @@
 					<% if(sid!=null) { %>
 						<a href="boardWrite.jsp" class="btn primary">글 쓰기</a>
 					<% } %>
+						
+					
 					</div>
 				</div>
 			</div>

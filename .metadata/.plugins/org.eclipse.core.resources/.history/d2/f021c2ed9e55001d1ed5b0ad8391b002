@@ -1,0 +1,14 @@
+package pro01test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class OracleTest {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}
