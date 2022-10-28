@@ -1,0 +1,5 @@
+package com.wemedia.util;
+
+public class SMTPAuthenticatior {
+
+}

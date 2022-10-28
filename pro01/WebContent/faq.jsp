@@ -58,16 +58,19 @@ try {
 	#myTable_filter > label > input[type=search] { color: #333;}
 	#myTable > tbody > tr > td > a { color : #333;}
 	#myTable > tbody > tr > td > a:HOVER { color : red;}
+	#myTable > tbody > tr > td:nth-child(2) { text-align: left;}
 	strong.total { display:block; text-align:right; padding-top:60px; margin-bottom:-20px; float:right; }
 	strong.cur { display:block; text-align:left; padding-top:60px; margin-bottom:-20px; float:left; }
-	.btn_group { clear:both; width:1200px; margin:20px auto; }
+	.btn_group { clear:both; width:580px; margin:20px auto; }
 	.btn_group .btn { display:block; float:left; margin:20px; min-width:100px; padding:8px; font-size:14px;
 	line-height:24px; border-radius:36px; border:2px solid #333; text-align:center; }
-	.btn_group .btn.primary { background-color:#333; color:#fff; }
+	.btn_group .btn.primary { background-color:#ff9933; color:#fff; }
 	.btn_group .btn.primary:hover { background-color:deepskyblue; }
 </style>
 <title>자주하는 질문 및 답변</title>
 <link rel="stylesheet" href="footer.css">
+<link rel="stylesheet" href="datatables.min.css">
+<script src="datatables.min.js"></script>
 </head>
 <body>
 <script>
